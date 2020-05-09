@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_pokemon_avatar"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="15dp"
+        android:elevation="2dp"
+        android:src="@drawable/bulbasaur"
+        app:layout_constraintBottom_toBottomOf="@id/mcv_dados"
+        app:layout_constraintEnd_toEndOf="@id/mcv_dados" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mcv_dados"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="30dp"
+        app:cardBackgroundColor="#8BBE8A"
+        app:fontFamily="@font/ubuntu_bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/mtv_id_pokemon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:textColor="#9917171B"
+                android:textSize="12sp"
+                app:fontFamily="@font/ubuntu_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="#001" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/mtv_name_pokemon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="#FFF"
+                android:textSize="26sp"
+                app:fontFamily="@font/ubuntu_bold"
+                app:layout_constraintStart_toStartOf="@id/mtv_id_pokemon"
+                app:layout_constraintTop_toBottomOf="@+id/mtv_id_pokemon"
+                tools:text="Bulbasaur" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mcv_badge_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                app:cardBackgroundColor="#62B957"
+                app:cardCornerRadius="2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/mtv_id_pokemon"
+                app:layout_constraintTop_toBottomOf="@id/mtv_name_pokemon">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_margin="5dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/icon_badge" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/mtv_badge_one_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:textColor="#FFF"
+                        android:textSize="12sp"
+                        app:fontFamily="@font/ubuntu_bold"
+                        tools:text="Grass" />
+
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mcv_badge_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="20dp"
+                app:cardBackgroundColor="#A552CC"
+                app:cardCornerRadius="2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/mcv_badge_one"
+                app:layout_constraintTop_toTopOf="@id/mcv_badge_one">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_margin="5dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/icon_badge" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/mtv_badge_two_text"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:textColor="#FFF"
+                        android:textSize="12sp"
+                        app:fontFamily="@font/ubuntu_bold"
+                        tools:text="Grass" />
+
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
